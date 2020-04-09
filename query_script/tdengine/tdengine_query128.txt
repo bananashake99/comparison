@@ -1,0 +1,13 @@
+select count(*) from db130.devices 
+select count(*) from db130.devices where devid=5 
+select count(*) from db130.devices where ts>='2019-07-16 12:02:40.000' and ts<='2019-07-16 12:40:40.000'
+
+
+select count(*) from db130.devices where temperature>49 group by devgroup;
+select max(humidity) from db130.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devid
+
+select avg(temperature) from db130.devices where devgroup<10 interval(1m);
+select avg(temperature) from db130.devices where ts>='2019-07-16 12:48:10.000' and ts<='2019-07-16 13:48:10.000' group by devid
+select avg(temperature) from db130.devices where ts>='2019-07-16 12:48:10.000' and ts<='2019-07-16 13:48:10.000' group by devgroup
+
+select max(humidity) as humidity, min(temperature) as temp from db130.devices where ts>='2019-07-16 12:02:40.000' and ts<='2019-07-16 12:40:40.000' and  temperature>= 90 group by devid order by devid

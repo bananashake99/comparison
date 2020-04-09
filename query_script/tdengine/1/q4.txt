@@ -1,0 +1,36 @@
+select count(humidity) from db.devices where ts>='2019-07-16 12:48:10.000' and ts<='2019-07-16 14:48:10.000' group by devid;
+select sum(humidity) from db.devices where ts>='2019-07-16 12:48:10.000' and ts<='2019-07-16 14:48:10.000' group by devid;
+select avg(humidity) from db.devices where ts>='2019-07-16 12:48:10.000' and ts<='2019-07-16 14:48:10.000' group by devid;
+
+
+
+select count(humidity) from db.devices where temperature>49 group by devgroup;
+select sum(humidity) from db.devices where temperature>49 group by devgroup;
+select avg(humidity) from db.devices where temperature>49 group by devgroup;
+select min(humidity) from db.devices where temperature>49 group by devgroup;
+select max(humidity) from db.devices where temperature>49 group by devgroup;
+select last_row(humidity) from db.devices where temperature>49 group by devgroup;
+
+select count(temperature) from db.devices where temperature>49 group by devid;
+select sum(temperature) from db.devices where temperature>49 group by devid;
+select avg(temperature) from db.devices where temperature>49 group by devid;
+select min(temperature) from db.devices where temperature>49 group by devid;
+select max(temperature) from db.devices where temperature>49 group by devid;
+select last_row(temperature) from db.devices where temperature>49 group by devid;
+
+select count(humidity) from db.devices where temperature>49 group by symbol;
+select sum(humidity) from db.devices where temperature>49 group by symbol;
+select avg(humidity) from db.devices where temperature>49 group by symbol;
+select min(humidity) from db.devices where temperature>49 group by symbol;
+select max(humidity) from db.devices where temperature>49 group by symbol;
+select last_row(humidity) from db.devices where temperature>49 group by symbol;
+
+
+select count(humidity) from db.devices where ts>='2019.07.16 09:48:10.000' and ts<='2019.07.16 14:48:10.000' group by devgroup;
+select sum(humidity) from db.devices where temperature>49 group by devgroup,symbol;
+select avg(humidity) from db.devices where temperature>49 group by devgroup,symbol;
+select min(humidity) from db.devices where temperature>49 group by devgroup,symbol;
+select max(humidity) from db.devices where temperature>49 group by devgroup,symbol;
+select last_row(humidity) from db.devices where temperature>49 group by devgroup,symbol;
+
+

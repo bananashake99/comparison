@@ -1,0 +1,19 @@
+select * from db.devices where devid>=1 and devid<=100;
+select * from db.devices where devid>=101 and devid<=200;
+select * from db.devices where devid>=201 and devid<=300;
+select * from db.devices where devid>=301 and devid<=400;
+select * from db.devices where devid>=401 and devid<=500;
+
+select * from db.devices where ts='19-07-16 14:48:06.000';
+
+select * from db.devices where symbol='A';
+select * from db.devices where symbol='B';
+select * from db.devices where symbol='C';
+select * from db.devices where symbol='D';
+select * from db.devices where symbol='E';
+
+select * from db.devices where ts='19-07-16 14:48:06.000';
+select * from db.devices where ts='19-07-16 14:48:07.000';
+select * from db.devices where ts='19-07-16 14:48:08.000';
+select * from db.devices where ts='19-07-16 14:48:09.000';
+select * from db.devices where ts='19-07-16 14:48:10.000';

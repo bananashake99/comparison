@@ -1,0 +1,14 @@
+select count(*) from db.devices ;
+select sum(temperature) from db.devices ;
+select avg(temperature) from db.devices;
+select min(temperature) from db.devices ;
+select max(temperature) from db.devices ;
+select last_row(temperature) from db.devices ;
+
+select count(*) from db.devices where symbol = 'A' or symbol ='B' or symbol ='C';
+select sum(temperature) from db.devices where symbol = 'A' or symbol ='B' or symbol ='C';
+select avg(temperature) from db.devices where symbol = 'A' or symbol ='B' or symbol ='C';
+select min(temperature) from db.devices where symbol = 'A' or symbol ='B' or symbol ='C';
+select max(temperature) from db.devices where symbol = 'A' or symbol ='B' or symbol ='C';
+select last_row(temperature) from db.devices where symbol = 'A' or symbol ='B' or symbol ='C';
+

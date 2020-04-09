@@ -1,0 +1,18 @@
+select count(*) from dev
+select count(*) from dev where devid=5 
+select count(*) from dev where localtime(timestamp(time)) between 2019.07.16 12:02:40.000: 2019.07.16 12:40:40.000
+select * from dev where localtime(timestamp(time)) between 2019.07.16 12:02:40.000: 2019.07.16 12:40:40.000, devid in [1,10,100,1000]
+select * from dev where localtime(timestamp(time)) between 2019.07.16 13:02:40.000: 2019.07.16 13:40:40.000, devid in [1,10,100,1000],humidity <= 10,temperature = 5
+select max(humidity) - min(humidity) from dev where humidity <20 group by bar(localtime(timestamp(time)), 60 * 5)
+select count(*) from dev where temperature>49 group by devgroup
+select max(humidity) from dev where temperature>49, devgroup in 1..50 group by devid
+select avg(temperature) from dev where devgroup<10 group by bar(localtime(timestamp(time)), 60)
+select avg(temperature) from dev where localtime(timestamp(time)) between 2019.07.16 12:48:10.000: 2019.07.16 13:48:10.000 group by devid
+select avg(temperature) from dev where localtime(timestamp(time)) between 2019.07.16 12:48:10.000: 2019.07.16 13:48:10.000 group by devgroup
+select avg(temperature) from dev group by localtime(timestamp(time)),devgroup
+select avg(temperature) from dev where localtime(timestamp(time)) between 2019.07.16 12:30:00.000: 2019.07.16 13:00:00.000, devid < 11 pivot by localtime(timestamp(time)).minute() , devid
+select max(humidity) as humidity, min(temperature) as temp from dev where localtime(timestamp(time)) between 2019.07.16 12:02:40.000: 2019.07.16 12:40:40.000, temperature>= 90 group by devid order by devid
+select max(temperature) as max_temp, avg(temperature) as avg_temp, min(temperature) as min_temp from dev group by devgroup order by avg_temp desc
+select avg(temperature) as temp from dev where localtime(timestamp(time)) between 2019.07.16 12:30:40.000: 2019.07.16 13:30:40.000 group by localtime(timestamp(time)).minute() as minute order by temp desc, minute asc
+select avg(temperature) as sum_temp from dev where localtime(timestamp(time)) between 2019.07.16 12:30:00.000: 2019.07.16 13:00:00.000, devid in [1,  10, 100, 1000] group by localtime(timestamp(time)).minute() order by sum_temp desc
+select top 20 localtime(timestamp(time)), devid, temperature, humidity from dev where humidity>10 order by localtime(timestamp(time)) desc

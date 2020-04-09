@@ -1,0 +1,50 @@
+select count(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup;
+select sum(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup;
+select avg(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup;
+select min(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup;
+select max(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup;
+select last_row(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup;
+
+select count(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by symbol;
+select sum(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by symbol;
+select avg(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by symbol;
+select min(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by symbol;
+select max(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by symbol;
+select last_row(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by symbol;
+
+select count(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup,symbol;
+select sum(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup,symbol;
+select avg(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup,symbol;
+select min(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup,symbol;
+select max(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup,symbol;
+select last_row(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=5 group by devgroup,symbol;
+
+
+
+
+select count(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup;
+select sum(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup;
+select avg(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup;
+select min(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup;
+select max(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup;
+select last_row(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup;
+
+select count(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by symbol;
+select sum(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by symbol;
+select avg(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by symbol;
+select min(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by symbol;
+select max(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by symbol;
+select last_row(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by symbol;
+
+select count(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup,symbol;
+select sum(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup,symbol;
+select avg(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup,symbol;
+select min(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup,symbol;
+select max(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup,symbol;
+select last_row(humidity) from db.devices where temperature>49 and devgroup>=1 and devgroup<=50 group by devgroup,symbol;
+
+
+
+
+
+

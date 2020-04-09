@@ -1,0 +1,4 @@
+select count(*) from loadTable('dfs://devicesDB', `dev)
+select count(*) from loadTable('dfs://devicesDB', `dev) where devid=5 
+select * from loadTable('dfs://devicesDB', `dev) where time between long(gmtime(2019.07.16 12:02:40.000)) : long(gmtime(2019.07.16 12:40:40.000))
+

@@ -1,0 +1,3 @@
+./tdengineTest -sql ./query.txt
+./tdengineTest -dataDir ~/DolphinDB_TDengine/comparisonTest/data/tdengine_testdata -numOfFiles 100 -writeClients 5 -rowsPerRequest 1000
+

@@ -1,0 +1,21 @@
+select count(temperature) from db.devices group by devgroup;
+select sum(temperature) from db.devices group by devgroup;
+select avg(temperature) from db.devices group by devgroup;
+select min(temperature) from db.devices group by devgroup;
+select max(temperature) from db.devices group by devgroup;
+select last_row(temperature) from db.devices group by devgroup;
+
+select count(temperature) from db.devices group by devid;
+select sum(temperature) from db.devices group by devid;
+select avg(temperature) from db.devices group by devid;
+select min(temperature) from db.devices group by devid;
+select max(temperature) from db.devices group by devid;
+select last_row(temperature) from db.devices group by devid;
+
+select count(humidity) from db.devices group by symbol;
+select sum(humidity) from db.devices group by symbol;
+select avg(humidity) from db.devices group by symbol;
+select min(humidity) from db.devices group by symbol;
+select max(humidity) from db.devices group by symbol;
+select last_row(humidity) from db.devices group by symbol;
+

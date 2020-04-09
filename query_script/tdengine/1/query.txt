@@ -1,0 +1,11 @@
+select count(*) from db.devices 
+select count(*) from db.devices where devid=5 
+select * from db.devices where ts>='2019.07.16 04:02:40.000' and ts<='2019.07.16 05:40:40.000' 
+
+select * from db.devices where ts>='2019.07.16 04:02:40.000' and ts<='2019.07.16 05:40:40.000' and devId = 1 and humidity <= 10 and temperature = 5
+
+select spread(humidity) from db.devices interval(5m)
+select max(temperature) from db.devices group by devid
+select avg(temperature) from db.devices group by devid
+select avg(temperature) from db.devices where ts>='2019.07.16 04:02:40.000' and ts<='2019.07.16 05:40:40.000' and devid < 10
+

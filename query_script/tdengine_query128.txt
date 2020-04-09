@@ -1,0 +1,8 @@
+select count(*) from db130.devices 
+select count(*) from db130.devices where devid=5 
+select * from db130.devices where ts>='2019-07-16 12:02:40.000' and ts<='2019-07-16 12:40:40.000'
+
+
+select spread(humidity) from db130.devices interval(5m)
+select max(temperature) from db130.devices group by devid
+
